@@ -31,8 +31,8 @@ This repository contains scripts to automate common maintenance tasks for Arch L
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/arch-maintenance-scripts.git
-   cd arch-maintenance-scripts
+   git clone https://github.com/mohdismailmatasin/pacman-tools.git
+   cd pacman-tools
    ```
 
 2. Make scripts executable:
