@@ -55,4 +55,4 @@ This repository contains scripts to automate common maintenance tasks for Arch L
 
 ## License
 
-MIT License
+[MIT](LICENSE)
