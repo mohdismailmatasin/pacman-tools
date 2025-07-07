@@ -1,53 +1,169 @@
 # Arch Linux Maintenance Scripts
 
-A collection of shell scripts for maintaining and optimizing Arch Linux systems.
+A comprehensive collection of shell scripts for maintaining and optimizing Arch Linux systems with enhanced logging, configuration, and system health monitoring.
 
-## Overview
+## 🚀 Features
 
-This repository contains scripts to automate common maintenance tasks for Arch Linux, helping you keep your system clean, up-to-date, and running smoothly.
+- **Interactive Menu System**: Easy-to-use menu for accessing all tools
+- **Comprehensive System Updates**: Automated pacman, AUR, and firmware updates
+- **System Health Monitoring**: Real-time system health checks and reporting
+- **Package Management**: Advanced package information and dependency tracking
+- **Intelligent Cleaning**: Smart cache management and orphan package removal
+- **Package Integrity Checking**: Automated detection and repair of package issues
+- **Configurable Settings**: Customizable behavior through configuration files
+- **Unified Logging**: Centralized logging with different log levels
+- **Safety Features**: Confirmation prompts and backup options
 
-## Scripts
+## 📋 Scripts Overview
 
-- **main.sh**: Interactive menu to access all maintenance tools
-- **arch-system-update.sh**: Comprehensive system updater that:
-  - Updates system packages via pacman
-  - Updates AUR packages (if yay/paru is installed)
-  - Checks for .pacnew/.pacsave files
-  - Removes orphaned packages
-  - Cleans package cache
-  - Updates firmware (if fwupd is available)
-- **pacman-cleaner.sh**: System cleaning utility that:
-  - Clears pacman cache (keeping recent versions)
-  - Removes orphaned packages
-  - Cleans package cache completely
-  - Refreshes package databases
-- **pacman-fixer.sh**: Package integrity checker that:
-  - Scans for package file issues using pacman -Qkk
-  - Identifies problematic packages
-  - Automatically reinstalls affected packages
+### Core Tools
 
-## Usage
+- **`main.sh`**: Interactive menu to access all maintenance tools
+- **`arch-system-update.sh`**: Comprehensive system updater
+- **`pacman-cleaner.sh`**: System cleaning utility with progress tracking
+- **`pacman-fixer.sh`**: Package integrity checker and repair tool
 
-1. Clone the repository:
+### New Enhanced Tools
 
-   ```bash
-   git clone https://github.com/mohdismailmatasin/pacman-tools.git
-   cd pacman-tools
-   ```
+- **`system-health-check.sh`**: Comprehensive system health monitoring
+- **`package-info.sh`**: Advanced package information and search utility
+- **`logger.sh`**: Unified logging system for all scripts
+- **`config.conf`**: Configuration file for customizing behavior
+- **`install.sh`**: Automated installation and setup script
 
-2. Make scripts executable:
+## 🔧 Installation
 
-   ```bash
-   chmod +x *.sh
-   ```
+### Quick Installation
 
-3. Run the main menu:
+```bash
+git clone https://github.com/mohdismailmatasin/pacman-tools.git
+cd pacman-tools
+chmod +x install.sh
+./install.sh
+```
 
-   ```bash
-   ./main.sh
-   ```
+### Manual Installation
 
-## Requirements
+```bash
+git clone https://github.com/mohdismailmatasin/pacman-tools.git
+cd pacman-tools
+chmod +x *.sh
+./main.sh
+```
+
+## 🎯 Usage
+
+### Interactive Menu
+
+```bash
+pacman-tools  # If installed globally
+# or
+./main.sh
+```
+
+### Individual Tools
+
+```bash
+# System update
+arch-system-update
+
+# System cleaning
+pacman-cleaner
+
+# Package repair
+pacman-fixer
+
+# Health check
+system-health-check
+
+# Package information
+package-info -h  # Show help
+package-info -s firefox  # Search packages
+package-info -i vim  # Package info
+package-info -u  # Find unused packages
+```
+
+## ⚙️ Configuration
+
+Edit `config.conf` to customize behavior:
+
+```bash
+# Cache cleaning settings
+CACHE_KEEP_VERSIONS=3
+CACHE_CLEAN_AGGRESSIVE=false
+
+# Update settings
+AUTO_CONFIRM=false
+UPDATE_AUR=true
+UPDATE_FIRMWARE=true
+
+# Logging settings
+LOG_LEVEL=INFO
+LOG_FILE="pacman-tools.log"
+```
+
+## 📊 System Health Check
+
+The health check monitors:
+
+- 💾 Disk space usage
+- 📦 Package database integrity
+- 🔄 Available system updates
+- 🗑️ Orphaned packages
+- ⚙️ Failed systemd services
+- 🔧 Kernel version status
+- 🧠 Memory usage
+- 📄 Configuration file conflicts
+
+## 🔍 Package Information Tool
+
+Advanced package management features:
+
+- 🔍 Search packages in repos and AUR
+- 📝 Detailed package information
+- 📁 List files installed by packages
+- 🔗 Show package dependencies
+- 🔄 Find reverse dependencies
+- 👤 Find package owner of files
+- 📊 List installed/explicit packages
+- 🧹 Find unused packages
+
+## 📝 Enhanced Features
+
+### Intelligent Updates
+
+- Pacman system updates
+- AUR package updates (yay/paru)
+- Firmware updates (fwupd)
+- Configuration file conflict detection
+- Orphan package cleanup
+- Smart cache management
+
+### Advanced Cleaning
+
+- Progress tracking with spinners
+- Configurable cache retention
+- Comprehensive orphan removal
+- Database refresh
+- Detailed operation summaries
+
+### Package Integrity
+
+- Deep package file verification
+- Automatic problematic package detection
+- Batch package reinstallation
+- Detailed issue reporting
+- Progress tracking
+
+## 🔒 Safety Features
+
+- Configuration backups
+- Confirmation prompts
+- Detailed logging
+- Error handling
+- Rollback capabilities
+
+## 📋 Requirements
 
 - Arch Linux or Arch-based distribution
 - Bash/Zsh shell
