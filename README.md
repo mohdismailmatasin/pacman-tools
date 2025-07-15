@@ -61,6 +61,50 @@ pacman-tools  # If installed globally
 ./main.sh
 ```
 
+```bash
+=======================================
+    Arch Linux Maintenance Menu
+=======================================
+1) System Update
+2) Pacman Cleaner
+3) Pacman Fixer
+4) System Health Check
+5) Package Information
+6) View Configuration
+7) Exit
+=======================================
+Select an option [1-7]: 4
+[INFO] Starting Arch Linux system health check...
+[INFO] Checking disk space...
+[INFO] Checking package database integrity...
+[INFO] Checking for available updates...
+[INFO] Checking for orphaned packages...
+[INFO] Checking for failed systemd services...
+[INFO] Checking kernel version...
+[INFO] Checking memory usage...
+[INFO] Checking for .pacnew/.pacsave files...
+
+===============================
+    SYSTEM HEALTH REPORT
+===============================
+
+✓ OK: System is up to date
+✓ OK: Root partition 19% full
+✓ OK: No orphaned packages
+✓ OK: Boot partition 17% full
+✓ OK: No .pacnew/.pacsave files
+✓ OK: Memory usage 25%
+✓ OK: Package database is healthy
+✓ OK: All systemd services running
+✓ OK: Kernel 6.15.6-arch1-1 (pacman: 6.15.6.arch1-1)
+
+===============================
+Summary: 9 OK, 0 Warnings, 0 Critical
+===============================
+System is healthy!
+Press Enter to return to menu...
+```
+
 ### Individual Tools
 
 ```bash
